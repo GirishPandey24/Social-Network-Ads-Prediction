@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Social Network Ads</title>
+</head>
+<body style="background-color:grey;">
+<center>
+	<h1>Social Network Ads Prediction</h1>
+<img src='\static\images.jpg' alt="Social Media"><br><br>
+<div class="container text-center">
+	<form action="/predict" method="POST"><!--/predict uthaya @app.route se from app.py file-->
+		<label>Enter Age</label><br>
+		<input type="number" name="age" placeholder="Enter Age"><br><br>
+		<label>Enter Salary</label><br>
+		<input type="number" name="salary" placeholder="Enter Salary"><br><br>
+		
+		<button class='btn btn-success bg-nav'>Predict</button><!--btn-success due to this button color is green-->
+	</form>
+</div>
+<div class="row">
+	{% if label %}
+		{% if label==1 %}
+			<h2 style="color":green>Will Purchase</h2>
+		{% else %}
+			<h2 style="color":red>Will Not Purchase</h2>
+		{% endif %}
+	{% endif %}
+</div>
+	
+</center>
+</body>
+</html>
